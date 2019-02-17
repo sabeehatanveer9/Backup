@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "47981110442",
+    "firebase_url": "https://backup-9108c.firebaseio.com",
+    "project_id": "backup-9108c",
+    "storage_bucket": "backup-9108c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47981110442:android:fccd00cb83b4a495",
+        "android_client_info": {
+          "package_name": "com.example.naveed.backup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47981110442-g2cq0h3uoadkvb97uqjvu1s4lo0so9ef.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.naveed.backup",
+            "certificate_hash": "2b0d66d7615d9030844d003f1c7faea5ffedb6f9"
+          }
+        },
+        {
+          "client_id": "47981110442-8vcjhevsvd6lus25tgc1nu2ce1mj6i5v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAk3odafbs4-h7wO7TwLya67UB3c-ZMieY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47981110442-8vcjhevsvd6lus25tgc1nu2ce1mj6i5v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
