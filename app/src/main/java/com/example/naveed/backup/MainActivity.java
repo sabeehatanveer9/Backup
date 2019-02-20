@@ -1,5 +1,6 @@
 package com.example.naveed.backup;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
@@ -7,11 +8,14 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity implements msgFragment.OnFragmentInteractionListener, contactFragment.OnFragmentInteractionListener{
 
     private ViewPager myViewPager;
     private TabLayout myTabs;
     private TabPagerAdapter myTabPagerAdapter;
+    private FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,21 @@ public class MainActivity extends AppCompatActivity implements msgFragment.OnFra
             }
         });
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if (currentUser == null){
+            sendUserToLogin();
+        }
+    }
+
+    private void sendUserToLogin() {
+
+        Intent loginIntent = new Intent(MainActivity.this, Login.class);
+        startActivity(loginIntent);
     }
 
     @Override

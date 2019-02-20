@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="   Enter email..."
+        android:drawableStart="@drawable/ic_action_email"
+        android:drawableLeft="@drawable/ic_action_email"
+        android:layout_marginTop="100dp"
+        android:inputType="textEmailAddress"
+        />
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="   Enter Password..."
+        android:drawableStart="@drawable/ic_action_password"
+        android:drawableLeft="@drawable/ic_action_password"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/etEmail"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:text="LOGIN"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnLogin"
+        android:text="Don't have an account? SignUp!!!"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+
+        />
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRegister"
+        android:text="or Login using your phone number.."
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        />
+
+    <Button
+        android:id="@+id/btnPhoneLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPhone"
+        android:text="phone"
+        android:background="@color/colorAccent"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_action_phone"
+        android:drawableLeft="@drawable/ic_action_phone" />
+</RelativeLayout>
