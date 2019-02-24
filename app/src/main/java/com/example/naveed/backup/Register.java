@@ -21,7 +21,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class Register extends AppCompatActivity {
 
     private Button createAccount;
-    private EditText regEmail, regPassword;
+    private EditText email, password;
     private FirebaseAuth mAuth;
     private ProgressDialog LoadingBar;
 
@@ -44,8 +44,8 @@ public class Register extends AppCompatActivity {
     }
 
     private void createNewAccount() {
-        String UserEmail= regEmail.getText().toString();
-        String UserPassword= regPassword.getText().toString();
+        String UserEmail= email.getText().toString();
+        String UserPassword= password.getText().toString();
 
         if(TextUtils.isEmpty(UserEmail)){
             Toast.makeText(this, "Please Enter Email", Toast.LENGTH_SHORT);
@@ -85,8 +85,8 @@ public class Register extends AppCompatActivity {
     private void InitializeFields() {
 
         createAccount = findViewById(R.id.btnRegister);
-        regEmail= findViewById(R.id.registerEmail);
-        regPassword= findViewById(R.id.registerPassword);
+        email= findViewById(R.id.registerEmail);
+        password= findViewById(R.id.registerPassword);
         LoadingBar = new ProgressDialog(this);
 
     }
