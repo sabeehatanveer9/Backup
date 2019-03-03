@@ -35,7 +35,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/etPassword"
         android:text="LOGIN"
-        android:background="@color/colorAccent"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:background="#C0392B"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="20dp"/>
 
@@ -70,9 +72,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvPhone"
         android:text="phone"
-        android:background="@color/colorAccent"
+        android:background="#C0392B"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="20dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         android:drawableStart="@drawable/ic_action_phone"
         android:drawableLeft="@drawable/ic_action_phone" />
 </RelativeLayout>

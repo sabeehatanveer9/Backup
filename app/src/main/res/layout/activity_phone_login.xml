@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PhoneLogin">
+
+
+    <EditText
+        android:id="@+id/etPhnNum"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:drawableStart="@drawable/ic_action_phone"
+        android:drawableLeft="@drawable/ic_action_phone"
+        android:hint="Enter your Phone Number..."
+        android:gravity="center"
+        android:layout_marginTop="150dp"
+        />
+
+    <EditText
+        android:id="@+id/etVerify"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Verification Code..."
+        android:gravity="center"
+        android:layout_marginTop="15dp"
+        android:drawableStart="@drawable/ic_action_password"
+        android:layout_below="@+id/etPhnNum"
+        android:drawableLeft="@drawable/ic_action_password"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/btnCode"
+        android:layout_below="@+id/etVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:background="#C0392B"
+        android:textColor="#FFFFFF"
+        android:text="Send Verification Code"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="100dp"
+        />
+
+    <Button
+        android:id="@+id/btnVerify"
+        android:layout_below="@+id/btnCode"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:textStyle="bold"
+        android:background="#C0392B"
+        android:textColor="#FFFFFF"
+        android:text="Send Verification Code"
+        android:padding="10dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="100dp"
+        android:visibility="invisible"
+        />
+
+</RelativeLayout>

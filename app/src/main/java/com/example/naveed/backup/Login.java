@@ -20,8 +20,6 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
-
-    private FirebaseUser currentUser;
     private FirebaseAuth mAuth;
     private Button loginButton, phoneLoginButton;
     private EditText email, password;
@@ -40,12 +38,18 @@ public class Login extends AppCompatActivity {
             }
         });
         mAuth = FirebaseAuth.getInstance();
-        currentUser = mAuth.getCurrentUser();
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 login();
+            }
+        });
+        phoneLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent phoneIntent = new Intent(Login.this, PhoneLogin.class);
+                startActivity(phoneIntent);
             }
         });
     }
@@ -94,19 +98,11 @@ public class Login extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        if (currentUser != null){
-          sendUserToMainActivity();
-        }
-    }
-
     private void sendUserToMainActivity() {
-
-        Intent loginIntent = new Intent(Login.this, MainActivity.class);
-        startActivity(loginIntent);
+        Intent mainIntent = new Intent(Login.this, MainActivity.class);
+        mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(mainIntent);
+        finish();
     }
 
     private void sendUserToRegisterActivity() {

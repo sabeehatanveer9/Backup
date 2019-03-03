@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity {
 
@@ -24,6 +26,7 @@ public class Register extends AppCompatActivity {
     private EditText email, password;
     private FirebaseAuth mAuth;
     private ProgressDialog LoadingBar;
+    private DatabaseReference rootRef;
 
 
     @Override
@@ -41,6 +44,7 @@ public class Register extends AppCompatActivity {
         });
 
         mAuth= FirebaseAuth.getInstance();
+        rootRef = FirebaseDatabase.getInstance().getReference();
     }
 
     private void createNewAccount() {
@@ -63,7 +67,9 @@ public class Register extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
-                                sendUserToLoginActivity();
+                                String currentUserID = mAuth.getCurrentUser().getUid();
+                                rootRef.child("Users").child(currentUserID).setValue("");
+                                sendUserToMainActivity();
                                 Toast.makeText(Register.this, "Account Created Successfully...", Toast.LENGTH_SHORT);
                                 LoadingBar.dismiss();
                             }
@@ -75,6 +81,13 @@ public class Register extends AppCompatActivity {
                         }
                     });
         }
+    }
+
+    private void sendUserToMainActivity() {
+        Intent mainIntent = new Intent(Register.this, MainActivity.class);
+        mainIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(mainIntent);
+        finish();
     }
 
     private void sendUserToLoginActivity() {
