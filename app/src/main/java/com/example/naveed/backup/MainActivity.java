@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity implements msgFragment.OnFragmentInteractionListener, contactFragment.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity implements msgFragment.OnFragmentInteractionListener{
 
     private ViewPager myViewPager;
     private TabLayout myTabs;
