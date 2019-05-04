@@ -32,7 +32,7 @@ public class CustomAdapter extends FirestoreRecyclerAdapter<ModelData, CustomAda
     @Override
     public DataHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_layout, parent, false);
+        View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_list, parent, false);
 
         return new DataHolder(v);
     }
@@ -44,8 +44,8 @@ public class CustomAdapter extends FirestoreRecyclerAdapter<ModelData, CustomAda
         public DataHolder(View itemView) {
             super(itemView);
 
-            tvName= itemView.findViewById(R.id.call_name);
-            tvNumber= itemView.findViewById(R.id.call_number);
+//            tvName= itemView.findViewById(R.id.call_name);
+//            tvNumber= itemView.findViewById(R.id.call_number);
         }
     }
 
@@ -53,4 +53,3 @@ public class CustomAdapter extends FirestoreRecyclerAdapter<ModelData, CustomAda
 
 
 }
-

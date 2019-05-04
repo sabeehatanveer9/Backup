@@ -13,7 +13,7 @@ import android.view.MenuItem;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class MainActivity extends AppCompatActivity implements msgFragment.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity {
 
     private ViewPager myViewPager;
     private TabLayout myTabs;
@@ -77,10 +77,6 @@ public class MainActivity extends AppCompatActivity implements msgFragment.OnFra
         startActivity(loginIntent);
     }
 
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

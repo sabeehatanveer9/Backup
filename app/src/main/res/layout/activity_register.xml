@@ -11,8 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="   Enter email..."
-        android:drawableStart="@drawable/ic_action_email"
-        android:drawableLeft="@drawable/ic_action_email"
         android:layout_marginTop="100dp"
         android:inputType="textEmailAddress"
         />
